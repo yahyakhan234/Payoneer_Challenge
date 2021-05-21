@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardElevation="30dp"
+            app:cardCornerRadius="10dp"
+            android:padding="20dp"
+            app:cardBackgroundColor="#D1CCCC"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.animsh.animatedcheckbox.AnimatedCheckBox
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:border_stroke_width="2dp"
+                    app:color_checked="@color/arrow_color"
+                    app:color_tick="@color/white"
+                    app:color_unchecked="@color/cardview_dark_background"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="10dp"
+                    app:color_unchecked_stroke="@color/black"
+                    app:small_tick="true"
+                    android:id="@+id/tickbox"
+                    app:tick_stroke_width="1dp"
+
+                        />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="100dp"
+                    android:layout_margin="15dp"
+                    android:layout_height="100dp"
+                    android:layout_toRightOf="@id/tickbox"
+                    android:id="@+id/IVlogo"
+                    />
+                <TextView
+                    android:id="@+id/TVmethod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Text"
+                    android:textStyle="bold"
+                    android:padding="10dp"
+                    android:layout_toRightOf="@+id/IVlogo"
+
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+</LinearLayout>
