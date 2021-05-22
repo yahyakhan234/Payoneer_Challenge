@@ -18,7 +18,7 @@ public class ResponseHandlerTest {
         Response response = new Response.Builder()
                 .request(new Request.Builder().url("http://url.com").build())
                 .protocol(Protocol.HTTP_1_1)
-                .code(400).message("").body(
+                .code(200).message("").body(
                         ResponseBody.create(
                                 MediaType.parse("application/json"),"{Mock:Json}"
 
