@@ -19,17 +19,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class PaymentMethodListAdapter  extends RecyclerView.Adapter<PaymentMethodListAdapter.MyViewHolder> {
     private Context context;
-    private List<ApplicableItem> movieList;
+    private List<ApplicableItem> paymentMethodList;
     private ItemClickListener clickListener;
 
-    public PaymentMethodListAdapter(Context context, List<ApplicableItem> movieList, ItemClickListener clickListener) {
+    public PaymentMethodListAdapter(Context context, List<ApplicableItem> paymentMethodList, ItemClickListener clickListener) {
         this.context = context;
-        this.movieList = movieList;
+        this.paymentMethodList = paymentMethodList;
         this.clickListener = clickListener;
     }
 
-    public void setMovieList(List<ApplicableItem> movieList) {
-        this.movieList = movieList;
+    public void setMovieList(List<ApplicableItem> paymentMethodList) {
+        this.paymentMethodList = paymentMethodList;
         notifyDataSetChanged();
     }
 
@@ -42,24 +42,24 @@ public class PaymentMethodListAdapter  extends RecyclerView.Adapter<PaymentMetho
 
     @Override
     public void onBindViewHolder(@NonNull PaymentMethodListAdapter.MyViewHolder holder, int position) {
-        holder.tvTitle.setText(this.movieList.get(position).getLabel());
+        holder.tvTitle.setText(this.paymentMethodList.get(position).getLabel());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                clickListener.onMovieClick(movieList.get(position));
+                clickListener.onMethodClick(paymentMethodList.get(position));
             }
         });
         Glide.with(context)
-                .load(this.movieList.get(position).getLinks().getLogo())
+                .load(this.paymentMethodList.get(position).getLinks().getLogo())
                 .apply(RequestOptions.fitCenterTransform())
                 .into(holder.imageView);
     }
 
     @Override
     public int getItemCount() {
-        if(this.movieList != null) {
-            return this.movieList.size();
+        if(this.paymentMethodList != null) {
+            return this.paymentMethodList.size();
         }
         return 0;
     }
@@ -78,6 +78,6 @@ public class PaymentMethodListAdapter  extends RecyclerView.Adapter<PaymentMetho
 
 
     public interface ItemClickListener{
-        public void onMovieClick(ApplicableItem movie);
+        public void onMethodClick(ApplicableItem method);
     }
 }

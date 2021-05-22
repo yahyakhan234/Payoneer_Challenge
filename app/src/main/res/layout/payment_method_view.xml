@@ -12,7 +12,8 @@
             app:cardElevation="30dp"
             app:cardCornerRadius="10dp"
             android:padding="20dp"
-            app:cardBackgroundColor="#D1CCCC"
+
+            app:cardBackgroundColor="@color/dark_gray"
             >
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -23,7 +24,7 @@
                     app:border_stroke_width="2dp"
                     app:color_checked="@color/arrow_color"
                     app:color_tick="@color/white"
-                    app:color_unchecked="@color/cardview_dark_background"
+                    app:color_unchecked="@color/dark_gray"
                     android:layout_centerVertical="true"
                     android:layout_margin="10dp"
                     app:color_unchecked_stroke="@color/black"

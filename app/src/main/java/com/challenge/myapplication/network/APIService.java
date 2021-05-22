@@ -10,5 +10,5 @@ import retrofit2.http.GET;
 public interface APIService {
 
     @GET("listresult.json")
-    Call<rootResponse> getMovieList();
+    Call<rootResponse> getDetailedJson();
 }

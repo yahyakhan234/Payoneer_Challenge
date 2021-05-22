@@ -46,14 +46,44 @@
         android:id="@+id/payment_methods_inflater"
         android:orientation="vertical"
         android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/PBloading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:progressTint="@color/primary"
+            />
+        <TextView
+            android:id="@+id/TVloading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading Payment Methods"
+            android:layout_gravity="center"
+            android:textStyle="bold"/>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+         />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/TVoops"
+            android:visibility="gone"
+            android:text=""
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/BTtryagain"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:text="Try Again"/>
 
     </LinearLayout>
 
